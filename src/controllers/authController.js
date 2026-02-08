@@ -6,9 +6,6 @@ const signToken = (id) =>
 
 const register = async (req, res, next) => {
   try {
-    console.log('register: start');
-    console.log('MONGO_URI exists?', Boolean(process.env.MONGO_URI));
-
     const { username, email, password } = req.body;
 
     const existing = await User.findOne({ email });
@@ -17,7 +14,6 @@ const register = async (req, res, next) => {
     }
 
     const user = await User.create({ username, email, password });
-    console.log('register: after db connect');
     const token = signToken(user._id);
 
     return res.status(201).json({
