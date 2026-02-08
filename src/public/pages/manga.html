@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Manga - Anime/Manga Fan</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>My Manga Library</h1>
+      <p class="muted">Create and manage your manga list.</p>
+    </header>
+
+    <nav class="top-nav">
+      <a href="/">Home</a>
+      <a href="/pages/search.html">Search</a>
+      <a href="/pages/profile.html">Profile</a>
+      <a href="/pages/login.html">Login</a>
+      <a href="/pages/about.html">About</a>
+    </nav>
+
+    <main class="container">
+      <section class="card">
+        <h2>Manga Editor</h2>
+        <p class="muted" id="manga-mode">Mode: Create</p>
+        <form id="manga-form">
+          <label>
+            Title
+            <input name="title" type="text" required />
+          </label>
+          <label>
+            Description
+            <textarea name="description" rows="3"></textarea>
+          </label>
+          <label>
+            Status
+            <select name="status">
+              <option value="planned">Planned</option>
+              <option value="reading">Reading</option>
+              <option value="completed">Completed</option>
+              <option value="on-hold">On-hold</option>
+              <option value="dropped">Dropped</option>
+            </select>
+          </label>
+          <label>
+            Rating (1-10)
+            <input name="rating" type="number" min="1" max="10" />
+          </label>
+          <label>
+            Cover Image URL
+            <input name="coverImage" type="url" placeholder="https://..." />
+          </label>
+          <label>
+            Volumes
+            <input name="volumes" type="number" min="1" />
+          </label>
+          <div class="button-row">
+            <button type="submit" id="manga-submit">Save Manga</button>
+            <button type="button" id="manga-cancel" class="secondary">Cancel Edit</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Your Manga List</h2>
+        <div class="actions">
+          <button id="refresh-manga">Refresh List</button>
+        </div>
+        <ul id="manga-list" class="list"></ul>
+      </section>
+
+    </main>
+
+    <script src="/js/common.js"></script>
+    <script src="/js/manga.js"></script>
+  </body>
+</html>

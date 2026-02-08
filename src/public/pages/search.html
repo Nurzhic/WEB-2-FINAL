@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search - Anime/Manga Fan</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Search Manga</h1>
+      <p class="muted">Find new titles via the Jikan API.</p>
+    </header>
+
+    <nav class="top-nav">
+      <a href="/">Home</a>
+      <a href="/pages/manga.html">My Manga</a>
+      <a href="/pages/profile.html">Profile</a>
+      <a href="/pages/login.html">Login</a>
+      <a href="/pages/about.html">About</a>
+    </nav>
+
+    <main class="container">
+      <section class="card">
+        <form id="search-form">
+          <label>
+            Title
+            <input name="query" type="text" required />
+          </label>
+          <button type="submit">Search</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Results</h2>
+        <ul id="search-results" class="list"></ul>
+      </section>
+
+    </main>
+
+    <script src="/js/common.js"></script>
+    <script src="/js/search.js"></script>
+  </body>
+</html>

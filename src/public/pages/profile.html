@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - Anime/Manga Fan</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Your Profile</h1>
+      <p class="muted">Update your account details.</p>
+    </header>
+
+    <nav class="top-nav">
+      <a href="/">Home</a>
+      <a href="/pages/manga.html">My Manga</a>
+      <a href="/pages/search.html">Search</a>
+      <a href="/pages/about.html">About</a>
+      <a href="/pages/login.html">Login</a>
+    </nav>
+
+    <main class="container">
+      <section class="card">
+        <h2>Current profile</h2>
+        <div id="profile-output" class="output">Not loaded</div>
+      </section>
+
+      <section class="card">
+        <h2>Update profile</h2>
+        <form id="profile-form">
+          <label>
+            Username
+            <input name="username" type="text" />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" />
+          </label>
+          <label>
+            New Password
+            <input name="password" type="password" minlength="6" />
+          </label>
+          <button type="submit">Update Profile</button>
+        </form>
+        <button id="logout-btn" class="secondary">Logout</button>
+      </section>
+
+    </main>
+
+    <script src="/js/common.js"></script>
+    <script src="/js/profile.js"></script>
+  </body>
+</html>

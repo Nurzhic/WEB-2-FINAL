@@ -1,0 +1,267 @@
+:root {
+  color-scheme: light;
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --border: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.78), rgba(15, 23, 42, 0.78)),
+    url("./assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--text);
+  min-height: 100vh;
+  padding: 32px 24px 48px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.site-header {
+  max-width: 1100px;
+  margin: 0 auto 16px;
+}
+
+.site-header h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.muted {
+  color: var(--muted);
+  margin: 0;
+}
+
+.top-nav {
+  max-width: 1100px;
+  margin: 0 auto 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.top-nav a {
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #0b1220;
+}
+
+.top-nav .nav-user {
+  margin-left: auto;
+  padding: 8px 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: center;
+}
+
+.hero-card {
+  background: #0b1220;
+  border-radius: 16px;
+  padding: 18px;
+  border: 1px solid var(--border);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.35);
+}
+
+.card h2,
+.card h3 {
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+input,
+textarea,
+select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #0b1220;
+  color: var(--text);
+}
+
+button,
+.button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #0b1220;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+}
+
+button.secondary,
+.button.secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  margin-top: 12px;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.list li {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #0b1220;
+}
+
+.result {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.result img {
+  width: 80px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #111827;
+}
+
+.result.no-image {
+  grid-template-columns: 1fr;
+}
+
+.list li .button-row button.secondary {
+  margin-top: 0;
+}
+
+.detail-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: minmax(180px, 260px) 1fr;
+}
+
+.detail-grid img {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: #0b1220;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #0b1220;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.list.links {
+  gap: 6px;
+}
+
+.list.links li {
+  padding: 4px 0;
+  border: none;
+  background: transparent;
+}
+
+.output {
+  background: #0b1220;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  min-height: 40px;
+  color: var(--muted);
+}
+
+.notice {
+  margin-top: 12px;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 24px 16px 32px;
+  }
+}

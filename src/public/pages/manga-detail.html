@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manga Details - Anime/Manga Fan</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Manga Details</h1>
+      <p class="muted">More information from Jikan API.</p>
+    </header>
+
+    <nav class="top-nav">
+      <a href="/">Home</a>
+      <a href="/pages/manga.html">My Manga</a>
+      <a href="/pages/search.html">Search</a>
+      <a href="/pages/profile.html">Profile</a>
+      <a href="/pages/login.html">Login</a>
+      <a href="/pages/about.html">About</a>
+    </nav>
+
+    <main class="container">
+      <section class="card" id="detail-card">
+        <div class="detail-grid">
+          <div id="detail-image"></div>
+          <div>
+            <h2 id="detail-title">Loading...</h2>
+            <p class="muted" id="detail-subtitle"></p>
+            <div class="tag-list" id="detail-tags"></div>
+            <p id="detail-synopsis"></p>
+            <div class="button-row">
+              <a id="detail-link" class="button" href="#" target="_blank" rel="noreferrer">Open on MyAnimeList</a>
+              <a class="button secondary" href="/pages/search.html">Back to search</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Extra info</h2>
+        <ul class="list" id="detail-extra"></ul>
+      </section>
+    </main>
+
+    <script src="/js/common.js"></script>
+    <script src="/js/manga-detail.js"></script>
+  </body>
+</html>
